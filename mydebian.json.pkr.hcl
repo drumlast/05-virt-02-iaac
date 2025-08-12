@@ -27,7 +27,7 @@ build {
       "echo \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian $(. /etc/os-release && echo $VERSION_CODENAME) stable\" > /etc/apt/sources.list.d/docker.list",
       "apt-get update",
       "apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin",
-      "usermod -aG docker ${SSH_USERNAME:-debian} || true",
+      "usermod -aG docker $${SSH_USERNAME:-debian} || true",
       "systemctl enable docker || true"
     ]
   }
