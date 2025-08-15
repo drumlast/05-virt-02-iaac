@@ -1,2 +1,3 @@
 *.auto.pkrvars.hcl
 mydebian.json
+variables.pkr.hcl.xyz
